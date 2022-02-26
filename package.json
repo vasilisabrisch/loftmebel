@@ -1,0 +1,15 @@
+{
+  "name": "loftmebel",
+  "version": "1.0.0",
+  "description": "Website to buy premium quality furniture",
+  "source": "./src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2"
+  }
+}

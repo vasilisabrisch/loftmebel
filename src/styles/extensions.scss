@@ -1,0 +1,64 @@
+//COLUMNS
+%column {
+    display: flex;
+    flex-direction: column;
+}
+
+%column-center-items {
+    @extend %column;
+    align-items: center;
+}
+
+%column-center-content {
+    @extend %column;
+    justify-content: center;
+}
+
+%column-center {
+    @extend %column;
+    justify-content: center;
+    align-items: center;
+}
+
+%column-space-between {
+    @extend %column;
+    justify-content: space-between;
+}
+
+//ROWS
+%row {
+    display: flex;
+    flex-direction: row;
+}
+
+%row-center-items {
+    @extend %row;
+    align-items: center;
+}
+
+%row-center-content {
+    @extend %row;
+    justify-content: center;
+}
+
+%row-center {
+    @extend %row;
+    justify-content: center;
+    align-items: center;
+}
+
+%row-space-between {
+    @extend %row;
+    justify-content: space-between;
+}
+
+%row-space-between-center {
+    @extend %row-center;
+    justify-content: space-between;
+}
+
+%row-space-between-wrap {
+    @extend %row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

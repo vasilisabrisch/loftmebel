@@ -1,0 +1,45 @@
+@use 'extensions';
+@import './colors.scss';
+@import './mixins.scss';
+
+.header {
+    height: 38px;
+    background-color: $gray;
+    @include paddingHorizontal(10px, 120, 12px, 140);
+    @extend %row;
+    .header__contact-number-wrapper {
+        margin-right: 30px;
+    }
+}
+
+.header-nav {
+    width: 23%;
+    ul {
+        @extend %row-space-between;
+        list-style: none;
+    }
+}
+
+.header__contact-number-wrapper {
+    @extend %row;
+    margin-left: auto;
+    img{
+        height: 17px;
+        width: 17px;
+        margin-right: 11px;
+    }
+}
+.header__delivery-wrapper {
+    @extend %row;
+    img {
+        width: 29px;
+        height: 17px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .header {
+        display: none;
+    }
+}

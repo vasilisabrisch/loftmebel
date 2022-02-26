@@ -1,0 +1,33 @@
+@use '/src/styles/extensions.scss';
+@import '/src/styles/colors.scss';
+@import '/src/styles/mixins.scss';
+
+.about-shop {
+    min-height: 500px;
+    height: 60vh;
+    @extend %row;
+    @include paddingHorizontal(0, 120, 0, 190);
+    position: relative;
+    margin-bottom: 100px;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        background-color: $light-blue-bg;
+        right: 0;
+    }
+    .about-shop__info-wrapper{
+        width: 40%;
+        .small-title-wrapper{
+            margin-bottom: 16px;
+        }
+        .title {
+            margin-bottom: 15px;
+        }
+        .about-us-text {
+            margin-bottom: 20px;
+        }
+    }
+}
+

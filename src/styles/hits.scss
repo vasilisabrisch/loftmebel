@@ -1,0 +1,71 @@
+@use 'extensions';
+@import './mixins.scss';
+@import './colors.scss';
+
+.hits {
+    @include paddingHorizontal(0px, 120, 0px, 140);
+    .navigation-link {
+        margin: 30px 0 35px;
+    }
+}
+
+.hits-wrapper {
+    @extend %row-space-between-wrap;
+}
+
+.hit-container{
+    @extend %column;
+    min-height: 380px;
+    width: 23%;
+    padding: 21px 20px 20px;
+    position: relative;
+    .hit-heart-icon {
+        margin-left: auto;
+        margin-bottom: 38px;
+    }
+    .product-image {
+        align-self: center;
+        margin-bottom: 54px;
+    }
+    .small {
+        margin: 6px 0 9px;
+    }
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.11);
+        transition: all 0.5s ease-in-out;
+        .product-additional-info {
+            @extend %column;
+            transform: scale(1);
+            
+        }
+    }
+}
+
+.product-additional-info {
+    display:none;
+    transform: scale(0);
+    background-color: $white;
+    margin-top: 15px;
+    .size {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .buy-button {
+        margin-top: 30px;
+    }
+
+}
+
+.sizes-wrapper {
+    @extend %row-center-items;
+    .size-container {
+        @extend %column;
+        .gray {
+            margin-bottom: 8px;
+        }
+    }
+    .cross {
+        margin: 0 15px;
+    }
+}

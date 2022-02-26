@@ -1,0 +1,59 @@
+@use 'extensions';
+@import './colors.scss';
+@import './mixins.scss';
+
+
+.footer {
+    @extend %row;
+    min-height: 240px;
+    @include paddingHorizontal(54px, 120, 38px, 140);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.03);
+    .footer__adress-wrapper {
+        margin-left: auto;
+    }
+}
+
+.footer-nav {
+    .footer__title {
+        margin-bottom: 10px;
+    }
+    .footer__links-container {
+        @extend %row;
+        .footer__links-wrapper {
+            @extend %column;
+            gap: 7px;
+            margin-right: 50px;
+        }
+    }
+    .bottom-links-container {
+        @extend %row;
+        margin-top: 34px;
+        .footer__text {
+            margin-right: 30px;
+        }
+    }
+}
+
+.footer__adress-wrapper {
+    @extend %column;
+    .logo{
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .footer__text {
+        text-align: right;
+    }
+}
+
+.footer_contacts-wrapper {
+    margin-top: 25px;
+    margin-left: auto;
+    @extend %row;
+    gap: 30px;
+    .footer__contact-container {
+        @extend %row-center-items;
+        .footer__text {
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use 'extensions';
+@import './colors.scss';
+@import './mixins.scss';
+
+
+.nav{
+    @extend %column;
+    .search-wrapper {
+        @include paddingHorizontal(46px, 120, 27px, 140);
+        margin-bottom: 20px;
+    }
+}
+
+.search-wrapper {
+    @extend %row-space-between-center;
+    .logo-img{
+        
+    }
+    .link {
+        
+    }
+    .nav-input {
+       
+    }
+}
+
+.navigation-icons-wrapper {
+    @extend %row-center-items;
+    gap: 30px;
+}
+
+.nav__contact-container {
+    @extend %row-center-items;
+    .nav__contact-img {
+        margin-right: 10px;
+    }
+    .link {
+        margin: 0;
+    }
+}
+

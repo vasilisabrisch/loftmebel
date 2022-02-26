@@ -1,0 +1,8 @@
+@use '/src/styles/extensions.scss';
+@import '/src/styles/colors.scss';
+@import '/src/styles/mixins.scss';
+
+.benefit {
+   @extend %column; 
+   
+}

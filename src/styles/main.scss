@@ -1,0 +1,208 @@
+@use 'extensions';
+@import './colors.scss';
+@import './mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dark-green-text {
+    color: $dark-green;
+}
+
+.header-link {
+    color: $white;
+    text-decoration: none;
+    @include fontRobotoC(14px, 400, 16.41px);
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.link {
+    @include fontRoboto(14px, 400, 16.41px);
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+        color: $dark-green;
+    }
+}
+
+.logo-img {
+    height: 25px;
+    width: 113px;
+}
+
+.cross {
+    @include fontRoboto(12px, 400, 14.06px);
+    color: $text-color;
+}
+
+.nav-input {
+    height: 40px;
+    border: none;
+    background: url('../../assets/icons/search-icon.png') no-repeat ;
+    background-position: 15px 13px;
+    background-color: $input-gray;
+    padding: 12px 49px 12px;
+    width: 25%;
+    color: $text-color;
+    @include fontRoboto(14px, 400, 16.41px);
+    &::placeholder {
+        color: $text-color;
+    }
+}
+
+.search-input {
+    height: 50px;
+    border: 1px solid $gray-border;
+    width: 100%;
+    background: url('../../assets/icons/search-icon.png') no-repeat ;
+    background-position: 15px 16px;
+    padding: 17px 49px 17px;
+    &::placeholder {
+        color: $text-color;
+        @include fontRoboto(14px, 400, 16.41px);
+    }
+}
+
+.navigation-link {
+    @include fontRoboto(16px, 400, 18.75px);
+    color: $text-color;
+    text-decoration: none;
+    &.red-text {
+        color: $red-text;
+    }
+}
+
+.etc-img {
+    cursor: pointer;
+}
+
+.back-arrow-button {
+    height: 30px;
+    width: 30px;
+    background-color: $back-button;
+    border: none;
+    cursor: pointer;
+    @extend %column-center;
+    &:hover {
+        transition: background-color 0.5s ease-in-out;
+        background-color: $white;
+        .arrow{
+            border-color: $back-button;
+        }
+    }
+    .arrow {
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: auto;
+        &.right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        &.left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+    }
+}
+
+.banner-title {
+    @include fontPlayfair(50px, 700, 52.65px);
+    text-transform: uppercase;
+    color: $gray-title;
+}
+
+.banner-text {
+    @include fontRobotoC(16px, 400, 22.53px);
+    color: $gray-text;
+}
+
+.catalog-button {
+    height: 45px;
+    border: none;
+    width: 163px;
+    background-color: $white;
+    @extend %column-center;
+    @include fontRobotoC(12px, 700, 16.9px);
+    color: $text-color;
+    text-transform: uppercase;
+    &:hover {
+        transition: all 0.6s ease-in-out;
+        background-color: $text-color;
+        color: $white;
+    }
+}
+
+.hit-heart-icon {
+    height: 18px;
+    width: 20.5px;
+}
+
+.product-image {
+    height: 150px;
+    width: 200px;
+}
+
+.product-text {
+    @include fontRoboto(16px, 500, 18.7px);
+    color: $text-color;
+    &.small {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 12.89px;
+        &.size {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.06px;
+        }
+    }
+}
+
+.buy-button {
+    border: none;
+    @include fontRoboto(13px, 400, 15.23px);
+    color: $white;
+    background-color: $dark-green;
+    padding: 13px 50px 12px;
+}
+
+.size-text {
+    @include fontRoboto(9px, 400, 10.55px);
+    text-transform: uppercase;
+    &.gray {
+        color: $light-gray-text;
+    }
+}
+
+.footer__title {
+    @include fontRoboto(14px, 500, 17.74px);
+    color: $black;
+    &.uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.footer__text {
+    @include fontRoboto(14px, 400, 17.74px);
+    color: $text-color;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+    &.red-text {
+        color: $red-text
+    } 
+}
+
+.logo {
+    @include fontRoboto(42px, 900, 49.22px);
+    text-transform: uppercase;
+    cursor: pointer;
+}

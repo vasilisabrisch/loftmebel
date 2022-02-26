@@ -1,0 +1,40 @@
+@use '/src/styles/extensions.scss';
+@import '/src/styles/colors.scss';
+@import '/src/styles/mixins.scss';
+
+.about-shop__info-wrapper {
+    @extend %column-center-content;
+}
+
+.about-shop__img{
+    position: absolute;
+    align-self: center;
+    height: 70%;
+    width: 46%;
+    max-width: 900px;
+    min-width: 550px;
+    right: 70px;
+    z-index: 3;
+}
+.light-blue-line {
+    position: absolute;
+    height: 2px;
+    width: 12%;
+    left: 0;
+    background-color: $light-blue-bg;
+    margin-top: 6px;
+}
+
+.small-title {
+    @include fontRoboto(12px, 400, 14.06px);
+}
+
+.title {
+    @include fontRoboto(24px, 400, 33.65px);
+    color: $text-color;
+}
+
+.about-us-text {
+    color: $about-us-text;
+    @include fontRoboto(14px, 400, 19.63px);
+}

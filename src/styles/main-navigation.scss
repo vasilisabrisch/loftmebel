@@ -1,0 +1,61 @@
+@use 'extensions';
+@import './colors.scss';
+@import './mixins.scss';
+
+
+.main-nav{
+    @extend %column;
+    @include paddingHorizontal(20px, 120, 30px, 140);
+    .search-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+.search-wrapper {
+    @extend %row-center-items;
+    .search-input {
+        margin-left: 38px;
+        margin-right: 37px;
+    }
+}
+
+.navigation-icons-wrapper {
+    @extend %row-center-items;
+    gap: 30px;
+}
+
+.navigation-wrapper {
+    min-height: 70px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+    @extend %row-center-items;
+    justify-content: space-between;
+    .link-container {
+        @extend %row-center;
+        height: 70px;
+        width: 100%;
+        &:hover {
+            transition: background-color 0.5s ease-in-out;
+            background-color: $dark-green;
+            .navigation-link{
+                color: $white;
+            }
+            img{
+                color: $white;
+                fill: $white;
+                stroke: $white;
+            }
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+    .etc-img-wrapper {
+        width: 30%;
+        @extend %row-center;
+    }
+    .sale-container {
+        width: 50%;
+        @extend %row-center;
+    }
+   
+}
